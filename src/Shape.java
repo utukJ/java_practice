@@ -4,6 +4,7 @@ public class Shape {
 
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Menu-");
         System.out.println("Enter shape name: ");
         String shape_name = sc.next().toLowerCase();
 

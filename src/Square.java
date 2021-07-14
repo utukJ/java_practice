@@ -18,8 +18,8 @@ public class Square {
         this.setSide(sc.nextDouble());
     }
     public void displayResults() {
-        System.out.println("Area is: " + this.area());
-        System.out.println("Perimeter is: " + this.perimeter());
+        System.out.println("Area of Square is: " + this.area());
+        System.out.println("Perimeter of Square is: " + this.perimeter());
     }
 
 }

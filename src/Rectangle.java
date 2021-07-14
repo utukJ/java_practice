@@ -24,7 +24,7 @@ public class Rectangle {
         this.setWidth(sc.nextDouble());
     }
     public void displayResults() {
-        System.out.println("Area is: " + this.area());
-        System.out.println("Perimeter is: " + this.perimeter());
+        System.out.println("Area of Rectangle is: " + this.area());
+        System.out.println("Perimeter of Rectangle is: " + this.perimeter());
     }
 }

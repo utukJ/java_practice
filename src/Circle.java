@@ -13,12 +13,12 @@ public class Circle {
         radius = value;
     }
     public void requireParameters() {
-        System.out.println("Enter the side: ");
+        System.out.println("Enter the radius: ");
         Scanner sc = new Scanner(System.in);
         this.setRadius(sc.nextDouble());
     }
     public void displayResults() {
-        System.out.println("Area is: " + this.area());
-        System.out.println("Perimeter is: " + this.perimeter());
+        System.out.println("Area of circle is: " + this.area());
+        System.out.println("Perimeter of circle is: " + this.perimeter());
     }
 }
