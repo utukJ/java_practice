@@ -1,28 +1,24 @@
 import java.util.*;
 
-public class Shape {
+public interface Shape {
+    double area();
+    double perimeter();
+    void requireParameters();
+    void displayResults();
 
-    public static void main(String args[]) {
+    public static void main(String args[]){
+        ShapeFactory factory = new ShapeFactory();
         Scanner sc = new Scanner(System.in);
-        System.out.println("Menu-");
         System.out.println("Enter shape name: ");
-        String shape_name = sc.next().toLowerCase();
-
-        if (shape_name.equals("rectangle")) {
-            Rectangle shape = new Rectangle();
-            shape.requireParameters();
-            shape.displayResults();
-        } else if (shape_name.equals("square")) {
-            Square shape = new Square();
-            shape.requireParameters();
-            shape.displayResults();
-        } else if (shape_name.equals("circle")) {
-            Circle shape = new Circle();
-            shape.requireParameters();
-            shape.displayResults();
-        } else {
+        Shape shape = factory.getShape(sc.next());
+        if (shape == null){
             System.out.println("Invalid shape!");
-            return;
+        }
+        else {
+            shape.requireParameters();
+            shape.displayResults();
         }
     }
 }
+
+
