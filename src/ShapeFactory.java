@@ -1,18 +1,18 @@
-public class ShapeFactory {
+import java.util.Locale;
+import java.util.Scanner;
 
-    public Shape getShape(String shapeType){
-        if (shapeType == null){
-            return null;
+public class ShapeFactory {
+    public Shape getShape(String shapeName){
+        switch(shapeName.toLowerCase(Locale.ROOT)) {
+            case "circle":
+                return new Circle();
+            case "rectangle":
+                return new Rectangle();
+            case "square":
+                return new Square();
+            default:
+                return null;
         }
-        if (shapeType.equalsIgnoreCase("circle")){
-            return new Circle();
-        }
-        if (shapeType.equalsIgnoreCase("square")){
-            return new Square();
-        }
-        if (shapeType.equalsIgnoreCase("rectangle")){
-            return new Rectangle();
-        }
-        return null;
     }
 }
+
